@@ -1,8 +1,17 @@
+# Profile Summary
+
 I'm a senior engineer working where large language models meet production systems and cybersecurity. Roughly **ten years** into a backend and architecture career — Python and Go, distributed systems, the unglamorous infrastructure work that makes things actually run — and the last **three of those bent hard toward applied LLMs**. Today most of my time goes into shipping AI features that have to be correct, fast, and cheap enough to live in front of real traffic.
+
 The work I'm proudest of sits at an intersection most teams treat as two separate problems.
+
 **On one side**: building agent and RAG systems that survive contact with messy enterprise data. I've taken an enterprise RAG knowledge assistant from blank repo to **85%+ answer accuracy** on hard, intent-heavy product queries, by going past the "stuff embeddings into a vector DB" recipe and actually tuning the retrieval — domain-fine-tuned SBERT, knowledge-graph grounding via UIE, reranking, structured chunking — and treating prompt engineering as a real engineering discipline rather than vibes.
+
 **On the other side**: bringing the same modeling toolkit into security operations. I've built an LLM-driven traffic-cleansing engine that uses BERT as a high-throughput first stage and a fine-tuned **Qwen 2.5** as a teacher model for adjudicating obfuscated payloads, with the false-positive stream looping back as training signal. The same instinct — *model what humans actually mean rather than only what regex can match* — earlier produced a BERT + CRF semantic classifier that unified alert taxonomies across multiple security vendors and shipped as a detection engine consumed by other product lines.
+
 Underneath all of that is a longer arc through cybersecurity: WAF productionization end-to-end (Modsecurity / Tengine deep customization, HA deployment, the works), threat-intel and **ATT&CK**-grounded SOAR research, and **seven granted invention patents** around AI-assisted security operations from my time leading an AI & security research team. That backstory is why I tend to design AI systems with an operator's mindset — what does the on-call human do when this misfires, what's the closed loop that gets us back to a good state, what does the cost curve look like at 100x traffic.
+
 `vLLM` for serving, KV-cache and PagedAttention awareness for latency budget, `Milvus` / `Faiss` + `Elasticsearch` + `Redis` for hybrid retrieval, `Kafka` for the data plumbing — these are tools I reach for without thinking, because the gap between a working prototype and a production AI system is almost always engineering, not modeling.
+
 ---
+
 **What I'm interested in:** applied LLM work where correctness and latency both matter, AI-native security and risk products, and teams that take production engineering seriously enough to let modeling people do their best work. Comfortable as both an individual contributor and as someone who has led small teams through novel problems. Open-source-curious, paper-curious, and biased toward shipping.
